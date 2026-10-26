@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Post</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+
+        .post-container {
+            max-width: 700px;
+            margin: 60px auto;
+        }
+
+        .post-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-card h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .post-card p {
+            margin-bottom: 20px;
+        }
+
+        .post-card label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+
+        .post-card input,
+        .post-card textarea,
+        .post-card select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+        }
+
+        .post-card input:focus,
+        .post-card textarea:focus,
+        .post-card select:focus {
+            border-color: #0d6efd;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+        }
+
+        .create-btn {
+            width: 100%;
+            padding: 11px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container post-container">
+
+        <div class="post-card">
+
+            <h2>Create New Post</h2>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-primary create-btn">
+                    Create Post
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
