@@ -79,8 +79,8 @@ Blog-app/
 - `templates/` — Contains HTML templates used to render web pages.
 - `static/` — Contains CSS, JavaScript, and image files.
 
-  
-Screenshots
+
+
 
 
 What I Learned
