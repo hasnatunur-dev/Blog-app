@@ -4,6 +4,7 @@ A Django-based blogging platform built to practice backend web development, data
 Overview
 Blog App is a web application for publishing and managing blog content. It is designed with Python and Django
 
+
 Features
 •	Blog Post Management — Create, view, edit, and delete blog posts.
 •	User Registration & Login — Allow users to create accounts and log in.
